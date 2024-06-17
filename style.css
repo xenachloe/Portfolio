@@ -1,0 +1,248 @@
+/* Styles généraux */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f0f4f8; /* Bleu gris clair */
+    margin: 0;
+    padding: 0;
+    color: #444; /* Gris foncé */
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    color: #2c3e50; /* Bleu gris */
+    font-family: 'Times New Roman', serif;
+}
+
+.presentation p {
+    font-size: 40px;
+    color: #2c3e50; /* Bleu gris */
+}
+
+.navbar {
+    background-color: #34495e; /* Bleu gris plus foncé */
+    padding: 10px 20px;
+    border-bottom: 2px solid #2c3e50; /* Bordure Bleu gris */
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #ffffff; /* Bleu gris */
+    font-size: 40px;
+    padding: 10px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.submenu-item a {
+    display: block;
+    padding: 10px 20px;
+    color: #2c3e50; /* Bleu gris */
+    text-decoration: none;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.menu-item a:hover,
+.submenu-item a:hover {
+    background-color: #34495e; /* Bleu gris plus foncé */
+}
+
+article {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+p {
+    font-size: 25px;
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #2c3e50; /* Bleu gris */
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Container for each section */
+.section, .hobby {
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* General styles for images */
+.section img, .stage img, .hobby img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Left-aligned image, right-aligned text */
+.image-left {
+    order: 1;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-right {
+    order: 2;
+    flex: 2;
+    border: 2px solid #2c3e50; /* Bordure Bleu gris */
+    padding: 20px;
+    margin-left: 20px;
+    background-color: #f0f4f8; /* Bleu gris clair */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Right-aligned image, left-aligned text */
+.image-right {
+    order: 2;
+    flex: 1;
+    padding-left: 20px;
+}
+
+.text-left {
+    order: 1;
+    flex: 2;
+    border: 2px solid #2c3e50; /* Bordure Bleu gris */
+    padding: 20px;
+    margin-right: 20px;
+    background-color: #f0f4f8; /* Bleu gris clair */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px; /* Taille de l'icône */
+    color: #555; /* Couleur des icônes */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 1200px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    .presentation p {
+        font-size: 35px;
+    }
+
+    .menu-item a {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    .presentation p {
+        font-size: 30px;
+    }
+
+    .menu-item a {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item a {
+        font-size: 25px;
+    }
+
+    .section, .stage, .hobby {
+        flex-direction: column;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .image-left, .image-right {
+        padding: 0;
+    }
+
+    .text-right, .text-left {
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    h1 {
+        font-size: 40px;
+        padding-top: 5%;
+        padding-bottom: 3%;
+    }
+
+    .presentation p {
+        font-size: 25px;
+    }
+
+    .menu-item a {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .section, .hobby {
+        margin-bottom: 30px;
+    }
+}

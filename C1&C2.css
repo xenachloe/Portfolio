@@ -1,0 +1,204 @@
+/* Styles généraux */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #cfe8f3; /* Bleu pastel */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Gris foncé */
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    padding-top: 2%; /* Réduire la marge supérieure */
+    padding-bottom: 1%; /* Réduire la marge inférieure */
+    color: #000000; /* Gris foncé pastel */
+    font-family: 'Bodoni MT', serif;
+    text-shadow: 0px 4px 8px rgba(255, 255, 255, 0.7);
+}
+
+h3 {
+    margin-top: 2px;
+}
+
+.navbar {
+    background-color: #94c1d4;
+    padding: 10px 20px;
+    border-bottom: 1px solid #6c757d; /* Bordure gris foncé pastel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item {
+    position: relative; /* Nécessaire pour la position absolue des sous-menus */
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #ffffff; /* Blanc */
+    font-size: 30px;
+    padding: 10px;
+    transition: color 0.5s;
+}
+
+.menu-item a:hover {
+    color: #ffffff; /* Blanc */
+    background-color: #59bde7; /* Bleu pastel */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positionner sous l'élément parent */
+    left: 0;
+    background-color: #ffffff; /* Blanc */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.submenu-item a {
+    display: block;
+    padding: 10px 20px;
+    color: #6c757d; /* Gris foncé pastel */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.submenu-item a:hover {
+    background-color: #1e5871; /* Bleu foncé */
+    color: #ffffff; /* Blanc */
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Ajustez la marge supérieure */
+    margin-bottom: 20px; /* Ajustez la marge inférieure */
+}
+
+.btn {
+    background-color: #94c1d4; /* Vert pastel */
+    border: none;
+    color: #ffffff; /* Blanc */
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px;
+    margin-top: 5%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #59bde7; /* Bleu pastel */
+}
+
+.content {
+    display: none; /* Cache le contenu par défaut */
+}
+
+article {
+    margin: 10px 5% 0 5%; /* Ajoute un espace en haut pour la barre de navigation */
+    padding: 5%;
+    padding-top: 0;
+}
+
+p {
+    font-size: 22px;
+    text-align: justify;
+    margin: 0 50px;
+    color: #6c757d; /* Gris foncé pastel */
+}
+
+figcaption {
+    margin-bottom: 20px;
+}
+
+.niveau{
+    margin-left: 0px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Coins arrondis */
+    border: 2px solid #000; /* Cadre noir */
+    transition: transform 0.3s ease-in-out; /* Animation de transition pour le zoom */
+}
+
+/* Style pour l'overlay de flou */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond transparent */
+    backdrop-filter: blur(5px); /* Flou de l'arrière-plan */
+    z-index: 1000;
+    display: none; /* Caché par défaut */
+}
+
+/* Style pour l'image zoomée */
+.zoomed-in {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.55); /* Zoom sur l'image */
+    z-index: 2000; /* Au-dessus de l'overlay */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000; /* Cadre noir */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.content-section {
+    flex: 1 1 auto; /* Ajuste automatiquement la taille en fonction du contenu */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.image-section {
+    flex: 0 0 auto; /* Ajuste automatiquement la taille en fonction de l'image */
+    margin-left: 20px;
+    width: 30%; /* Ajuste la largeur de la section image */
+}
+
+.image-section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000;
+}
