@@ -1,10 +1,9 @@
-/* Styles généraux */
 body {
     font-family: 'Georgia', serif;
-    background-color: #f0f4f8; /* Bleu gris clair */
+    background-color: #cfe8f3; /* Bleu pastel */
     margin: 0;
     padding: 0;
-    color: #444; /* Gris foncé */
+    color: #333; /* Gris foncé */
 }
 
 h1 {
@@ -12,19 +11,26 @@ h1 {
     text-align: center;
     padding-top: 5%;
     padding-bottom: 2%;
-    color: #2c3e50; /* Bleu gris */
-    font-family: 'Times New Roman', serif;
+    color: #000000; /* Gris foncé pastel */
+    font-family: 'Bodoni MT', serif;
+    text-shadow: 0px 4px 8px rgba(255, 255, 255, 0.7);
 }
 
 .presentation p {
     font-size: 40px;
-    color: #2c3e50; /* Bleu gris */
+    color: #000000; /* Gris foncé pastel */
+    margin-top: 10%;
 }
 
 .navbar {
-    background-color: #34495e; /* Bleu gris plus foncé */
+    background-color: #94c1d4; /* Vert pastel */
     padding: 10px 20px;
-    border-bottom: 2px solid #2c3e50; /* Bordure Bleu gris */
+    border-bottom: 1px solid #6c757d; /* Bordure gris foncé pastel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .menu {
@@ -37,15 +43,21 @@ h1 {
 
 .menu-item a {
     text-decoration: none;
-    color: #ffffff; /* Bleu gris */
-    font-size: 40px;
+    color: #ffffff; /* Blanc */
+    font-size: 30px;
     padding: 10px;
+    transition: color 0.5s;
+}
+
+.menu-item a:hover {
+    color: #ffffff; /* Gris foncé pastel */
+    background-color: #59bde7; /* Rose pastel */
 }
 
 .submenu {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: #ffffff; /* Blanc */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     list-style: none;
     padding: 0;
@@ -56,17 +68,18 @@ h1 {
 .submenu-item a {
     display: block;
     padding: 10px 20px;
-    color: #2c3e50; /* Bleu gris */
+    color: #6c757d; /* Gris foncé pastel */
     text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.submenu-item a:hover {
+    background-color: #1e5871; /* Rose pastel */
+    color: #ffffff; /* Blanc */
 }
 
 .menu-item:hover .submenu {
     display: block;
-}
-
-.menu-item a:hover,
-.submenu-item a:hover {
-    background-color: #34495e; /* Bleu gris plus foncé */
 }
 
 article {
@@ -77,25 +90,27 @@ article {
 }
 
 p {
-    font-size: 25px;
+    font-size: 22px;
     text-align: justify;
     margin-left: 50px;
     margin-right: 50px;
-    color: #2c3e50; /* Bleu gris */
+    color: #6c757d; /* Gris foncé pastel */
 }
 
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Coins arrondis */
+    border: 2px solid #000; /* Cadre noir */
 }
 
 /* Container for each section */
 .section, .hobby {
     display: flex;
     align-items: center;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -105,6 +120,9 @@ img {
     width: 100%;
     max-width: 500px;
     height: auto;
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    border: 2px solid #000; /* Cadre noir */
 }
 
 /* Left-aligned image, right-aligned text */
@@ -117,11 +135,13 @@ img {
 .text-right {
     order: 2;
     flex: 2;
-    border: 2px solid #2c3e50; /* Bordure Bleu gris */
+    border: 1px solid #ddd; /* Bordure légère */
     padding: 20px;
     margin-left: 20px;
-    background-color: #f0f4f8; /* Bleu gris clair */
+    background-color: #ffffff; /* Blanc */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Coins arrondis */
+    border: 2px solid #000; /* Cadre noir */
 }
 
 /* Right-aligned image, left-aligned text */
@@ -134,10 +154,13 @@ img {
 .text-left {
     order: 1;
     flex: 2;
-    border: 2px solid #2c3e50; /* Bordure Bleu gris */
+    border: 1px solid #ddd; /* Bordure légère */
     padding: 20px;
     margin-right: 20px;
-    background-color: #f0f4f8; /* Bleu gris clair */
+    background-color: #ffffff; /* Blanc */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Coins arrondis */
+    border: 2px solid #000; /* Cadre noir */
 }
 
 .social-icons {
@@ -152,10 +175,11 @@ img {
     margin: 0 10px;
     font-size: 24px; /* Taille de l'icône */
     color: #555; /* Couleur des icônes */
+    transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #007bff; /* Couleur au survol */
+    color: #ffadad; /* Rose pastel */
 }
 
 /* Media Queries for Responsive Design */
@@ -169,7 +193,7 @@ img {
     }
 
     .menu-item a {
-        font-size: 35px;
+        font-size: 28px;
     }
 
     p {
@@ -187,7 +211,7 @@ img {
     }
 
     .menu-item a {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     p {
@@ -202,7 +226,7 @@ img {
     }
 
     .menu-item a {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .section, .stage, .hobby {
